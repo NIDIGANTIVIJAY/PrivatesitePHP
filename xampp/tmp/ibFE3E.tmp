@@ -1,0 +1,26 @@
+2024-08-22 00:48:48 0x908 Error in foreign key constraint of table `private_site_db`.`user_preferences`:
+Create  table `private_site_db`.`user_preferences` with foreign key constraint failed. Parse error in 'FOREIGN KEY (brand_id) REFERENCES brands(brand_id),
+    FOREIGN KEY (category_id) REFERENCES category(category_id)
+)' near 'brand_id),
+    FOREIGN KEY (category_id) REFERENCES category(category_id)
+)'.
+)'.
+_2` FOREIGN KEY (`sale_id`) REFERENCES `sales` (`sale_id`)
+Trying to delete or update in parent table, in index PRIMARY tuple:
+DATA TUPLE: 10 fields;
+ 0: len 4; hex 80000006; asc     ;;
+ 1: len 6; hex 000000000529; asc      );;
+ 2: len 7; hex 4e000001820b56; asc N     V;;
+ 3: len 6; hex 737373647364; asc sssdsd;;
+ 4: len 8; hex 6473647364736473; asc dsdsdsds;;
+ 5: len 5; hex 99b4240000; asc   $  ;;
+ 6: len 5; hex 99b42c0000; asc   ,  ;;
+ 7: len 4; hex 80000003; asc     ;;
+ 8: len 4; hex 66c5f8d2; asc f   ;;
+ 9: len 4; hex 66c5f8d2; asc f   ;;
+
+But in child table `private_site_db`.`sale_views`, in index sale_id, there is a record:
+PHYSICAL RECORD: n_fields 2; compact format; info bits 0
+ 0: len 4; hex 80000006; asc     ;;
+ 1: len 4; hex 8000000c; asc     ;;
+

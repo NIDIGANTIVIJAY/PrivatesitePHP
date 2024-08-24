@@ -1,0 +1,1 @@
+`private_site_db`.`sale_views`, CONSTRAINT `sale_views_ibfk_2` FOREIGN KEY (`sale_id`) REFERENCES `sales` (`sale_id`)
